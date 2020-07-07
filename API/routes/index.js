@@ -12,6 +12,10 @@ module.exports = function(){
     router.get('/pacientes', 
         pacienteController.obtenerPacientes
     )
+    // Obtiene un paciente en especifico por id
+    router.get('/pacientes/:id', 
+        pacienteController.obtenerPaciente
+    )
 
 
     return router;
