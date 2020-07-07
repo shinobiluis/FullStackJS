@@ -13,6 +13,15 @@ exports.nuevoCliente = async (req, res, next) => {
         console.log(error);
         next();
     }
-    
-   
+}
+
+// obtenerPacientes
+exports.obtenerPacientes = async (req, res, next) => {
+    try {
+        const pacientes = await Paciente.find({});
+        res.json (pacientes);
+    } catch (error) {
+        console.log(error);
+        next();
+    }
 }
