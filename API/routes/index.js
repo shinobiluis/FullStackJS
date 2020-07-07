@@ -17,6 +17,11 @@ module.exports = function(){
         pacienteController.obtenerPaciente
     )
 
+    // Actualizar un registro con un id especifico
+    router.put('/pacientes/:id', 
+        pacienteController.actualizarPaciente
+    )
+
 
     return router;
 }

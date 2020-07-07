@@ -36,3 +36,18 @@ exports.obtenerPaciente = async (req, res, next) => {
         next();
     }
 }
+
+// Actualizar paciente
+exports.actualizarPaciente = async (req, res, next) => {
+    try {req.body
+        const pacientes = await Paciente.findOneAndUpdate(
+            {_id: req.params.id}, 
+            req.body,
+            {new: true}
+        );
+        res.json (pacientes);
+    } catch (error) {
+        console.log(error);
+        next();
+    }
+}
