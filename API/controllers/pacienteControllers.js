@@ -51,3 +51,15 @@ exports.actualizarPaciente = async (req, res, next) => {
         next();
     }
 }
+
+// Eliminar paciente
+exports.eliminarPaciente = async (req, res, next) => {
+    try {
+        const pacientes = await Paciente.findOneAndDelete({_id: req.params.id});
+        // res.json (pacientes);
+        res.json({ menseje: 'El paciente fue eliminado'});
+    } catch (error) {
+        console.log(error);
+        next();
+    }
+}
