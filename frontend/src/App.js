@@ -1,17 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
 
+import clienteAxios from './config/axios';
 // Componentes
 import Pacientes from './components/Pacientes';
 import NuevaCita from './components/NuevaCita';
 import Cita from './components/Cita';
 
 function App() {
-  console.log(process.env.REACT_APP_BACKEND_URL);
+
+  // state de la app
+  const [citas, guardarCitas] = useState([]);
+  useEffect( ()=>{
+    const consultarAPI = () => {
+      clienteAxios.get('/pacientes')
+        .then(respuesta => {
+          console.log(respuesta)
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    }
+    consultarAPI();
+  }, []);
+
   return (
     <Router>
       <Switch>
