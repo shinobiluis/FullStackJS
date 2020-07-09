@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 import clienteAxios from '../config/axios';
 
 const NuevaCita = (props) => {
@@ -30,6 +30,7 @@ const NuevaCita = (props) => {
         clienteAxios.post('/pacientes', cita)
             .then(respuesta => {
                 console.log(respuesta);
+                props.guardarConsultar(true);
                 props.history.push('/');
             })
             .catch(error => {
@@ -126,4 +127,4 @@ const NuevaCita = (props) => {
     );
 };
 
-export default NuevaCita;
+export default withRouter(NuevaCita);
