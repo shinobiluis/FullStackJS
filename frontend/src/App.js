@@ -38,7 +38,7 @@ function App() {
           component={() => <Pacientes citas={citas} />}
         />
         <Route
-          exact path="/nuevacita"
+          exact path="/nueva"
           component={NuevaCita}
         />
         <Route
