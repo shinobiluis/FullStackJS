@@ -13,3 +13,12 @@ Este repositorio fue creado para implementar un ejemplo de FullStack en Javascri
 ## Ejecutar docker
 
 Para ejecutar ingresa revisa este [archivo](./docker/)
+
+## Ejecutar API NODE.JS
+
+Para ejecutar ingresa revisa este [archivo](./API/)
+
+
+
+
+<p align="center"><img src="https://octodex.github.com/images/electrocat.png" width="500"></p>
