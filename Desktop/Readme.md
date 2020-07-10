@@ -1,12 +1,11 @@
-## Instalacion de electron
+# Electron.js
+<p align="center"><img src="../assets_readme/proyecto.png" width="100%"></p>
 
-https://www.electronjs.org/
+Para ejecutar el proyecto en node primero debe ejecutar el [docker](../docker/) y [API](../API/)
+ 
+Si ya ejecutó el docker y API solo se requiere realizar 2 pasos:
+ 
+1. Ejecuta en terminal: `npm i` o `npm install` esto instalará todas las dependencias requeridas.
+2. Ejecuta el proyecto con un `npm run start`
 
-`npm i -D electron@latest`
-
-## Intalamos dependecia para crear intaladores
-
-`npm install --save-dev electron-builder`
-
-
-En el package.son se coloco `"dist": "electron-builder -m"` el -m es para mac para linux seria -l y -w para windows
+<p align="center"><img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" width="500"></p>
