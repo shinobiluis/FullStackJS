@@ -2,7 +2,7 @@
 
 <p align="center"><img src="../assets_readme/proyecto.png" width="100%"></p>
 
-Para ejecutar el proyecto en node primero debe ejecutar el [docker](../Docker/).
+Para ejecutar el proyecto en node primero debe ejecutar el [docker](../docker/).
  
 Si ya ejecutó el docker solo se requiere realizar 2 pasos:
  
