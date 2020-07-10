@@ -18,6 +18,13 @@ Para ejecutar ingresa revisa este [archivo](./docker/)
 
 Para ejecutar ingresa revisa este [archivo](./API/)
 
+## Ejecutar React.JS
+
+Para ejecutar ingresa revisa este [archivo](./frontend/)
+
+## Ejecutar Electron
+
+Para ejecutar ingresa revisa este [archivo](./Desktop/)
 
 
 
