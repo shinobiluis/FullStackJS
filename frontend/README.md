@@ -10,3 +10,7 @@ https://reactrouter.com/web/guides/quick-start
 ## Intalamos Axios
 
 `npm install axios`
+
+## Instalamos sweetalert2
+
+`npm install sweetalert2`
