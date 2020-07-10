@@ -12,4 +12,4 @@ Este repositorio fue creado para implementar un ejemplo de FullStack en Javascri
 
 ## Ejecutar docker
 
-Para ejecutar ingresa revisa este [archivo](./docker/Readme.md)
+Para ejecutar ingresa revisa este [archivo](./docker/)
