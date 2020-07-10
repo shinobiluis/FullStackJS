@@ -55,6 +55,7 @@ function App() {
             return (
               <Cita
                 cita={cita[0]}
+                guardarConsultar={guardarConsultar}
               />
             )
           }}

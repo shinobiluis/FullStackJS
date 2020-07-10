@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import clienteAxios from '../config/axios';
 
 const Cita = (props) => {
     
@@ -7,8 +8,26 @@ const Cita = (props) => {
         props.history.push('/');
         return null;
     }
+    
     // extraer por props
-    const { cita: {nombre, propietario, fecha, telefono, hora, sintomas} } = props;
+    const { cita: {_id, nombre, propietario, fecha, telefono, hora, sintomas} } = props;
+
+    // Eliminar un registro
+    const eliminarCita = id => {
+        // console.log(id)
+        clienteAxios.delete(`/pacientes/${id}`)
+            .then(respuesta => {
+                console.log(respuesta)
+                props.guardarConsultar(true);
+                props.history.push('/');
+            })
+            .catch(error=>{
+                console.log(error)
+            })
+        
+        
+    }
+
     return (
         <Fragment>
             <h1 className="my-5">Nombre cita: {nombre}</h1>
@@ -36,8 +55,10 @@ const Cita = (props) => {
                             <p>Teléfono: {telefono}</p>
                         </div>
                         <div className="">
-                            <button type="button"
+                            <button 
+                                type="button"
                                 className="text-uppercase py-2 px-5 font-weight-bold btn btn-danger col"
+                                onClick={ () => eliminarCita(_id) }
                             >
                                 Eliminar &times;
                             </button>
