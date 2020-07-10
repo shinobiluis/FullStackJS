@@ -9,7 +9,8 @@ function crearVentana(){
         minWidth:800,
         minHeight:600,
         center:true,
-        show:false
+        show:false,
+        icon: 'icon.png'
     });
 
     // cuando la apliacion es cerrada.
